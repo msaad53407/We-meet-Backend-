@@ -157,6 +157,7 @@ app.get("/login", cors(), async (req, res) => {
 });
 
 app.post("/", cors(), (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const { name } = req.body;
   res.json(`Hello ${name}!`);
 });
