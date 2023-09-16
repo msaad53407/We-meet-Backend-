@@ -156,6 +156,11 @@ app.get("/login", cors(), async (req, res) => {
   }
 });
 
+app.post("/", cors(), (req, res) => {
+  const { name } = req.body;
+  res.json(`Hello ${name}!`);
+});
+
 app.listen(PORT, function () {
   console.log("App listening on http://localhost:" + PORT);
 });
